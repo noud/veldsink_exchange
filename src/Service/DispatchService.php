@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use App\Entity\Dispatcher;
+use Doctrine\ORM\EntityManagerInterface;
 
 class DispatchService
 {
@@ -13,7 +14,7 @@ class DispatchService
 
     private $soap;
 
-    public function __construct(EntityManagerInterface $, RESTService $rest, SOAPService $soap)
+    public function __construct(EntityManagerInterface $em, RESTService $rest, SOAPService $soap)
     {
         $this->em = $em;
         $this->rest = $rest;

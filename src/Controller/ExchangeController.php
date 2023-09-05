@@ -20,7 +20,7 @@ class ExchangeController extends AbstractController {
     /**
      * @Route("/{amount}/{from}/{to}", name="exchange", methods={"GET"})
      */
-    public exchange(float $amount, string $from, string $to) {
+    public function exchange(float $amount, string $from, string $to) {
         $toAmount = $this->dispatcher->getExchange($amount, $from, $to);
         var_dump($toAmount);
     }

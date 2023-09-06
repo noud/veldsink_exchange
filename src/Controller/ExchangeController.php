@@ -24,5 +24,6 @@ class ExchangeController extends AbstractController {
     public function exchange(float $amount, string $from, string $to) {
         $toAmount = $this->dispatcher->getExchange($amount, $from, $to);
         var_dump($toAmount);
+        die();
     }
 }
